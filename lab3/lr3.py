@@ -18,7 +18,7 @@ activation_function = nn.Tanh()
 # Определение функции, которую будем аппроксимировать
 def myfun(x):
     # return 3 * np.sin((x - 2) * 2) - 2
-    return np.sin(x*2)
+    return np.sin(x*4)
 
 # Функция для аппроксимации 1D функции
 def approx_1d_function(x_train, x_eval, units, epochs):
@@ -122,8 +122,8 @@ x_eval_fix = np.linspace(0, 10, num=batch_size_eval).reshape(-1,1)
 
 # Установка параметров модели (5)
 # units = 15 - нейроны
-units = 8
-epochs = 20000
+units = 20
+epochs = 40000
 
 # Выполнение аппроксимации и визуализация результатов
 x, predictions, labels = approx_1d_function(x_train=x_train_fix, x_eval=x_eval_fix, units=units, epochs=epochs)
